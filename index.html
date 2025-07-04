@@ -203,15 +203,22 @@
       }
     }
 
+    // OUVINTES DE EVENTOS — MAPEADOS E COMENTADOS:
+
+    // 1. Ouvinte de mudança no ano
     selectAno.addEventListener('change', () => {
-      atualizarSemanas();
-      carregarTarefas();
+      atualizarSemanas();  // Atualiza o número de semanas possíveis no mês
+      carregarTarefas();   // Carrega as tarefas correspondentes
     });
+
+    // 2. Ouvinte de mudança no mês
     selectMes.addEventListener('change', () => {
-      atualizarSemanas();
-      carregarTarefas();
+      atualizarSemanas();  // Recalcula as semanas possíveis
+      carregarTarefas();   // Atualiza a agenda com as tarefas do novo mês
     });
-    selectSemana.addEventListener('change', carregarTarefas);
+
+    // 3. Ouvinte de mudança na semana
+    selectSemana.addEventListener('change', carregarTarefas); // Só carrega as tarefas salvas da semana
 
     atualizarSemanas();
     carregarTarefas();
