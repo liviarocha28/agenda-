@@ -1,106 +1,159 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fef6e4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #8b5d33;
-    padding: 20px 0 10px;
-  }
-  
-  #topoControles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #5f7161;
-  }
-  
-  #limparTarefasBtn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #e26d5a;
-    color: white;
-    cursor: pointer;
-  }
-  
-  #limparTarefasBtn:hover {
-    background-color: #cc5a4c;
-  }
-  
-  .selectors {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  select {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #f2e9e4;
-  }
-  
-  .agenda {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    padding: 20px;
-  }
-  
-  .dia {
-    background-color: #f2e9e4;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dia h2 {
-    text-align: center;
-    color: #5f7161;
-    margin-bottom: 10px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  .tarefa-input {
-    width: 100%;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #a3c4f3;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #90b4e0;
-  }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fef6e4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #8b5d33;
+  padding: 20px 0 10px;
+}
+
+#topoControles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #5f7161;
+}
+
+#limparTarefasBtn,
+#temaToggleBtn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+#limparTarefasBtn {
+  background-color: #e26d5a;
+}
+
+#limparTarefasBtn:hover {
+  background-color: #cc5a4c;
+}
+
+#temaToggleBtn {
+  background-color: #666;
+}
+
+#temaToggleBtn:hover {
+  background-color: #444;
+}
+
+.selectors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f2e9e4;
+}
+
+.agenda {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.dia {
+  background-color: #f2e9e4;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dia h2 {
+  text-align: center;
+  color: #5f7161;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.tarefa-input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a3c4f3;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #90b4e0;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+}
+
+body.dark-mode h1,
+body.dark-mode #contadorCliques {
+  color: #f2f2f2;
+}
+
+body.dark-mode .dia {
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode select,
+body.dark-mode .tarefa-input {
+  background-color: #3a3a3a;
+  color: #f2f2f2;
+  border: 1px solid #555;
+}
+
+body.dark-mode button {
+  background-color: #555;
+  color: #f2f2f2;
+}
+
+body.dark-mode button:hover {
+  background-color: #666;
+}
+
+body.dark-mode #limparTarefasBtn {
+  background-color: #aa4444;
+}
+
+body.dark-mode #limparTarefasBtn:hover {
+  background-color: #993333;
+}
+
   
