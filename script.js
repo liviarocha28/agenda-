@@ -10,6 +10,7 @@ const agendaContainer = document.getElementById('agendaContainer');
 const contadorDiv = document.getElementById('contadorCliques');
 const limparBtn = document.getElementById('limparTarefasBtn');
 const temaToggleBtn = document.getElementById('temaToggleBtn');
+const temaPink = document.getElementById('temaPink');
 
 // Recupera o número de tarefas adicionadas do localStorage ou inicia com 0
 let contadorCliques = parseInt(localStorage.getItem('contadorCliques')) || 0;
@@ -146,19 +147,32 @@ function aplicarTemaSalvo() {
   const tema = localStorage.getItem('tema') || 'claro';
   if (tema === 'escuro') {
     document.body.classList.add('dark-mode');
-    temaToggleBtn.textContent = '☀️ Modo Claro';
-  } else {
+    temaToggleBtn.textContent = 'Modo Claro';
+  } else if (tema==="claro"){
     document.body.classList.remove('dark-mode');
-    temaToggleBtn.textContent = '🌙 Modo Escuro';
+    temaToggleBtn.textContent = 'Modo Escuro';
+  } else {
+    document.body.classList.add('pink-mode');
+    temaToggleBtn.textContent = 'Modo Pink';
   }
 }
+
 
 // Alterna entre modo escuro e claro
 function alternarTema() {
   const modoEscuroAtivo = document.body.classList.toggle('dark-mode');
   localStorage.setItem('tema', modoEscuroAtivo ? 'escuro' : 'claro');
-  temaToggleBtn.textContent = modoEscuroAtivo ? '☀️ Modo Claro' : '🌙 Modo Escuro';
+  temaToggleBtn.textContent = modoEscuroAtivo ? 'Modo Claro' : 'Modo Escuro';
 }
+
+//Alterna entre modo claro e pink
+function temaPink() {
+  const modoEscuroAtivo = document.body.classList.toggle('pink-mode');
+  localStorage.setItem('tema', modoEscuroAtivo ? 'escuro' : 'claro');
+  temaToggleBtn.textContent = modoEscuroAtivo ? 'Modo Claro' : 'Modo Escuro';
+}
+
+
 
 // EVENT LISTENERS — reagem a mudanças do usuário
 
@@ -183,8 +197,15 @@ limparBtn.addEventListener('click', limparTarefas);
 // Quando o botão de tema é clicado
 temaToggleBtn.addEventListener('click', alternarTema);
 
+// Quando o botão de tema rosa é clicado
+temaPink.addEventListener('click', temaPink);
+
+
+
 // Inicializa a agenda ao abrir a página
 atualizarSemanas();
 carregarTarefas();
 atualizarContador();
 aplicarTemaSalvo();
+
+// temaToggleBtn

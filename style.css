@@ -118,7 +118,7 @@ button:hover {
 
 /* DARK MODE STYLES */
 body.dark-mode {
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: #f2f2f2;
 }
 
@@ -153,6 +153,48 @@ body.dark-mode #limparTarefasBtn {
 }
 
 body.dark-mode #limparTarefasBtn:hover {
+  background-color: #993333;
+}
+
+
+
+/* PINK MODE STYLES */
+body.pink-mode {
+  background-color: #bd4fa1;
+  color: #f2f2f2;
+}
+
+body.pink-mode h1,
+body.pink-mode #contadorCliques {
+  color: #f2f2f2;
+}
+
+body.pink-mode .dia {
+  background-color: #a36594;
+  box-shadow: 0 2px 5px rgba(146, 102, 128, 0.1);
+}
+
+body.pink-mode select,
+body.pink-mode .tarefa-input {
+  background-color: #b15592;
+  color: #f2f2f2;
+  border: 1px solid #d394c8;
+}
+
+body.pink-mode button {
+  background-color: #be61af;
+  color: #f2f2f2;
+}
+
+body.pink-mode button:hover {
+  background-color: #d671c9;
+}
+
+body.pink-mode #limparTarefasBtn {
+  background-color: #aa4444;
+}
+
+body.pink-mode #limparTarefasBtn:hover {
   background-color: #993333;
 }
 
