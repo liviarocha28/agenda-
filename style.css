@@ -3,12 +3,14 @@ body {
   background-color: #fef6e4;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
   text-align: center;
   color: #8b5d33;
   padding: 20px 0 10px;
+  transition: color 0.3s ease;
 }
 
 #topoControles {
@@ -19,15 +21,18 @@ h1 {
   margin-bottom: 10px;
   font-weight: bold;
   color: #5f7161;
+  transition: color 0.3s ease;
 }
 
 #limparTarefasBtn,
-#temaToggleBtn {
+#temaToggleBtn,
+#temaPinkBtn {
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #limparTarefasBtn {
@@ -46,6 +51,14 @@ h1 {
   background-color: #444;
 }
 
+#temaPinkBtn {
+  background-color: #c75ca0;
+}
+
+#temaPinkBtn:hover {
+  background-color: #b04186;
+}
+
 .selectors {
   display: flex;
   justify-content: center;
@@ -58,6 +71,7 @@ select {
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #f2e9e4;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .agenda {
@@ -72,12 +86,14 @@ select {
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dia h2 {
   text-align: center;
   color: #5f7161;
   margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
 ul {
@@ -100,6 +116,7 @@ input[type="checkbox"] {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 button {
@@ -110,6 +127,7 @@ button {
   background-color: #a3c4f3;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -118,18 +136,23 @@ button:hover {
 
 /* DARK MODE STYLES */
 body.dark-mode {
-  background-color: #000000;
+  background-color: #121212;
   color: #f2f2f2;
 }
 
 body.dark-mode h1,
-body.dark-mode #contadorCliques {
+body.dark-mode #contadorCliques,
+body.dark-mode #topoControles {
   color: #f2f2f2;
 }
 
 body.dark-mode .dia {
   background-color: #2b2b2b;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .dia h2 {
+  color: #dcdcdc;
 }
 
 body.dark-mode select,
@@ -156,38 +179,57 @@ body.dark-mode #limparTarefasBtn:hover {
   background-color: #993333;
 }
 
+body.dark-mode #temaToggleBtn {
+  background-color: #444;
+}
 
+body.dark-mode #temaToggleBtn:hover {
+  background-color: #222;
+}
+
+body.dark-mode #temaPinkBtn {
+  background-color: #8a2e71;
+}
+
+body.dark-mode #temaPinkBtn:hover {
+  background-color: #6d2359;
+}
 
 /* PINK MODE STYLES */
 body.pink-mode {
-  background-color: #bd4fa1;
+  background-color: #d997c1; /* tom rosa suave */
   color: #f2f2f2;
 }
 
 body.pink-mode h1,
-body.pink-mode #contadorCliques {
+body.pink-mode #contadorCliques,
+body.pink-mode #topoControles {
   color: #f2f2f2;
 }
 
 body.pink-mode .dia {
-  background-color: #a36594;
-  box-shadow: 0 2px 5px rgba(146, 102, 128, 0.1);
+  background-color: #bf7fa3; /* rosa médio */
+  box-shadow: 0 2px 5px rgba(146, 102, 128, 0.2);
+}
+
+body.pink-mode .dia h2 {
+  color: #ebd3e0; 
 }
 
 body.pink-mode select,
 body.pink-mode .tarefa-input {
-  background-color: #b15592;
+  background-color: #c68ab3;
   color: #f2f2f2;
   border: 1px solid #d394c8;
 }
 
 body.pink-mode button {
-  background-color: #be61af;
+  background-color: #bf72a7;
   color: #f2f2f2;
 }
 
 body.pink-mode button:hover {
-  background-color: #d671c9;
+  background-color: #d276bc;
 }
 
 body.pink-mode #limparTarefasBtn {
@@ -198,4 +240,18 @@ body.pink-mode #limparTarefasBtn:hover {
   background-color: #993333;
 }
 
-  
+body.pink-mode #temaToggleBtn {
+  background-color: #a05287;
+}
+
+body.pink-mode #temaToggleBtn:hover {
+  background-color: #84376b;
+}
+
+body.pink-mode #temaPinkBtn {
+  background-color: #7b3e67;
+}
+
+body.pink-mode #temaPinkBtn:hover {
+  background-color: #5f2a4a;
+}
